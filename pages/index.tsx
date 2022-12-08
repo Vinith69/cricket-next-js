@@ -9,7 +9,7 @@ export default function Home() {
 		setShowText(!showText);
 	};
 	return (
-		<div className="flex flex-col items-center justify-center w-full my-10">
+		<div className="flex flex-col items-center justify-center w-full min-h-[90vh] my-10">
 			<Avatar
 				src={"/logo.png"}
 				alt="Logo"
