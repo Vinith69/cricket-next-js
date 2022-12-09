@@ -13,14 +13,18 @@ function ProfilePicUploader() {
         style={{
           clipPath: "polygon(0 0%, 100% 0, 100% 50%, 0 100%)",
         }}
-        className="object-cover"
+        className="object-cover opacity-82"
       />
+      <div
+        className="opacity-30 bg-black h-[100%] w-screen absolute "
+        style={{
+          clipPath: "polygon(0 0%, 100% 0, 100% 50%, 0 100%)",
+        }}
+      ></div>
       <div className="relative w-48 h-48 bg-red-300 rounded-full">
         <Image
           src={"/logo.png"}
           alt="Logo"
-          // width={100}
-          // height={100}
           fill
           className="object-cover rounded-full"
         />

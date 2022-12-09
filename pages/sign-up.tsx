@@ -1,10 +1,15 @@
-import Link from "next/link";
+import { useRouter } from "next/router";
 import { Button, Input, Radio } from "@material-tailwind/react";
 import { useState } from "react";
 import AppNavBar from "../components/AppNavbar";
 import ProfilePicUploader from "../components/ProfilePicUploader";
 
 function SignUp() {
+  const router = useRouter();
+  const handleProceed = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    router.push("/sign-up-enter-password");
+  };
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-screen mt-0">
       <AppNavBar text="Register" />
@@ -46,6 +51,7 @@ function SignUp() {
         variant="gradient"
         className="w-screen mt-auto rounded-none bg-gradient-to-r from-orange-300 to-red-400"
         ripple={true}
+        onClick={handleProceed}
       >
         Proceed
       </Button>
